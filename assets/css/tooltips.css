@@ -1,0 +1,141 @@
+.tooltips-ctn h4, .tooltips-static h4, .popovers-sgn h4, .popover-cl-pro .popover .popover-title{
+    font-size:16px;
+    color:#333;
+}
+.tooltiperr-inner{
+    padding:5px 15px;
+    background:red;
+}
+.tooltiperr.right .tooltiperr-arrow{
+    border-right-color:red;
+}
+.tooltip-inner{
+    padding:5px 15px;
+    background:#00c292;
+}
+.tooltip.right .tooltip-arrow{
+    border-right-color: #00c292;
+}
+.tooltip.bottom .tooltip-arrow{
+    border-bottom-color: #00c292;
+}
+.tooltip.top .tooltip-arrow{
+    border-top-color: #00c292;
+}
+.tooltip.left .tooltip-arrow{
+    border-left-color: #00c292;
+}
+.tooltip.in{
+    opacity:1;
+}
+.tooltips-ctn a{
+    color:#00c292;
+}
+.tooltips-static .btn-primary, .popover-cl-pro .btn-primary{
+    font-size:14px;
+    background:#00c292;
+    border:none;
+    border-radius:3px;
+    outline:none;
+    color:#fff;
+    margin-right:10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+.tooltips-static .btn-primary:hover, .tooltips-static .btn-primary:focus, .tooltips-static .btn-primary:active, .popover-cl-pro .btn-primary:hover, .popover-cl-pro .btn-primary:focus, .popover-cl-pro .btn-primary:active{
+    background:#00c292;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    outline:none;
+}
+.tooltips-static p, .tooltips-ctn p{
+    margin-bottom:0px;
+}
+.tooltips-static, .tooltips-ctn, .stc-tlt-hd{
+    margin-bottom:20px;
+}
+.tooltips-static.tooltips-cvn{
+    margin-bottom:0px;
+}
+.tooltips-hd.tooltips-hdn p{
+    margin-bottom:0px;
+}
+.tooltips-hd.tooltips-hdn{
+    margin-bottom:20px;
+}
+
+.edtTooltip + .tooltip > .tooltip-inner
+{
+    background-color: #FF9800; 
+    color: #fff; 
+    border: 1px solid #FF9800; 
+    padding: 5px 5px;
+    z-index: 0;
+}
+ Tooltip on top 
+.edtTooltip + .tooltip.top > .tooltip-arrow
+{
+    border-top: 5px solid #FF9800;
+    z-index: 0;
+}
+
+ Tooltip on right 
+.edtTooltip + .tooltip.right > .tooltip-arrow
+{
+    border-right: 5px solid #FF9800;
+    z-index: 0;
+}
+
+ Tooltip on bottom 
+.edtTooltip + .tooltip.bottom > .tooltip-arrow
+{
+    border-bottom: 5px solid #FF9800;
+    z-index: 0;
+}
+
+.delTooltip + .tooltip > .tooltip-inner
+{
+    background-color: #F44336; 
+    color: #fff; 
+    border: 1px solid #F44336; 
+    padding: 5px 5px;
+    z-index: 0;
+}
+ Tooltip on top 
+.delTooltip + .tooltip.top > .tooltip-arrow
+{
+    border-top: 5px solid #F44336;
+    z-index: 0;
+}
+
+.hisTooltip + .tooltip > .tooltip-inner
+{
+    background-color: #009688; 
+    color: #fff; 
+    border: 1px solid #009688; 
+    padding: 5px 5px;
+    z-index: 0;
+}
+
+ Tooltip on top 
+.hisTooltip + .tooltip.top > .tooltip-arrow
+{
+    border-top: 5px solid #009688;
+    z-index: 0;
+}
+
+.verTooltip + .tooltip > .tooltip-inner
+{
+    background-color:#2f2f2f;
+    color:#fff; 
+    border-radius:7px;
+    margin:none;
+    padding: 10px 10px;
+    z-index: 0;
+}
+ Tooltip on top 
+.verTooltip + .tooltip.bottom > .tooltip-arrow
+{
+    margin:none;
+    padding:none;
+    border-bottom: 7px solid #2f2f2f;
+    z-index: 0;
+}

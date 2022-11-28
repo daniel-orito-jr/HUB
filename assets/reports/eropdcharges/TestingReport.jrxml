@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2019-11-14T15:29:42 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TestingReport" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="template.engine" value="tabular_template"/>
+        <property name="net.sf.jasperreports.export.pdf.title" value="XXX"/>
+        <property name="net.sf.jasperreports.export.pdf.creator" value="XXX"/>
+        <property name="net.sf.jasperreports.export.pdf.author" value="XXX"/>
+        <property name="net.sf.jasperreports.export.pdf.keywords" value="XXX"/>
+        <property name="net.sf.jasperreports.export.pdf.subject" value="XXX"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="rgba(191, 225, 255, 0.0)">
+		<box>
+			<topPen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
+			<bottomPen lineWidth="0.5" lineColor="rgba(0, 0, 0, 0.0)"/>
+		</box>
+	</style>
+	<subDataset name="SampleDataset" uuid="a6c8f914-a77c-4882-8d22-f2e070f43591">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="debit" class="java.lang.String"/>
+		<field name="credit" class="java.lang.String"/>
+		<field name="pics" class="java.lang.String"/>
+		<field name="series" class="java.lang.String"/>
+		<field name="value" class="java.lang.Number"/>
+	</subDataset>
+	<parameter name="ReportDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="picture" class="java.lang.String"/>
+	<parameter name="ChartDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ChartTitle" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="132" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="451" height="80" backcolor="#000000" uuid="17682764-df02-4019-b2d7-8e75ca15e0ac"/>
+				<staticText>
+					<reportElement style="Title" x="10" y="0" width="370" height="60" uuid="11ac3f46-a024-4077-8b0f-d70faad0f27d"/>
+					<textElement>
+						<font size="40" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Cherry Title]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="SubTitle" x="187" y="40" width="249" height="29" uuid="d3ca5a61-0a5a-4fbe-abda-ede840dea154"/>
+					<textElement textAlignment="Right">
+						<font size="22" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Cherry SubTitle]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="87" width="451" height="32" forecolor="#000000" backcolor="#CC0000" uuid="7366c5da-9f57-4203-9be5-2771f0645269"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="298" y="7" width="144" height="20" forecolor="#FFFFFF" uuid="690688fa-96ea-4941-8308-e9f0c094fe99"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<image>
+				<reportElement x="460" y="0" width="93" height="132" uuid="16e4d31d-53cc-4e4f-a8b4-b3c9f704c3b8"/>
+				<imageExpression><![CDATA[$P{picture}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="-7" width="555" height="24" forecolor="#D0B48E" backcolor="#000000" uuid="2857bbc0-51d5-4ed7-b542-cefaeb4bdc36"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="513" y="0" width="40" height="20" forecolor="#FFFFFF" uuid="d3ed7bc6-6ef6-4e83-9691-406b1a607921"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="433" y="0" width="80" height="20" forecolor="#FFFFFF" uuid="87edde92-ff3c-4380-9545-f2a0dfda283a"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="10" y="1" width="197" height="20" forecolor="#FFFFFF" uuid="09939741-c641-46e1-9582-e814af1b519c"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="486" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="30" forecolor="#030000" backcolor="#050000" uuid="6df8fd53-d377-450b-ac56-ae023dac3e46"/>
+			</frame>
+			<componentElement>
+				<reportElement x="0" y="-2" width="555" height="210" uuid="2f216fc2-ec56-443c-8e0d-a6b970f1868e">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="SampleDataset" uuid="f25f2df9-d6fc-4fb7-a0fe-fe1554c51f1c">
+						<dataSourceExpression><![CDATA[$P{ReportDataSource}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="160" uuid="39cff3e0-87cc-466e-bf19-ba4e56ffe153">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="160" height="30" forecolor="#FCFAFA" uuid="7da75aa7-a97f-4071-84e7-b518cb7149ca"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph firstLineIndent="0"/>
+								</textElement>
+								<text><![CDATA[Static Text]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell height="30">
+							<textField>
+								<reportElement x="0" y="0" width="160" height="30" uuid="99fad4f1-a0b4-420b-b730-59408187d492"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{debit}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="180" uuid="57114f8c-d0b0-4870-8382-8e740ab1fad9">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="180" height="30" forecolor="#FCFAFA" uuid="5748f223-ca8a-44b4-abaa-f1ecc8f63fc6"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph firstLineIndent="0"/>
+								</textElement>
+								<text><![CDATA[Static Text]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell height="30">
+							<textField>
+								<reportElement x="0" y="0" width="180" height="30" uuid="15330ac2-2ce4-46da-b924-89682af523ef"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{credit}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="180" uuid="43c5bfcb-efd3-49e1-b87d-4445f78c5da2">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:tableHeader height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="180" height="30" forecolor="#FCFAFA" uuid="3faf4328-a87d-4b90-9657-1971419df5fb"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<paragraph firstLineIndent="0"/>
+								</textElement>
+								<text><![CDATA[Static Text]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell height="30">
+							<textField>
+								<reportElement x="0" y="0" width="180" height="30" uuid="62ae54b0-59ea-499b-ac1a-3b61c3617fa5"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{pics}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<pie3DChart>
+				<chart evaluationTime="Report">
+					<reportElement x="0" y="286" width="555" height="200" uuid="849a2af7-e4dc-43c9-9c91-13fa2191678b"/>
+					<chartTitle color="#0C3F69">
+						<font fontName="Elephant" size="18"/>
+						<titleExpression><![CDATA[$P{ChartTitle}]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset>
+						<datasetRun subDataset="SampleDataset" uuid="a6aa58f6-8c7c-467b-a9f8-64d3c06414b6">
+							<dataSourceExpression><![CDATA[$P{ChartDataSource}]]></dataSourceExpression>
+						</datasetRun>
+					</dataset>
+					<keyExpression><![CDATA[$F{series}]]></keyExpression>
+					<valueExpression><![CDATA[$F{value}]]></valueExpression>
+					<labelExpression><![CDATA[$F{series} + ": " + $F{value}+""]]></labelExpression>
+				</pieDataset>
+				<pie3DPlot isCircular="true">
+					<plot/>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+		</band>
+	</summary>
+</jasperReport>
