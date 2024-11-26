@@ -1,6 +1,6 @@
 # HUB
 
-Hospital Unified Business Solution (HUB) Is a fully integrated Hospital Information System (HIS) that provides healthcare institutions a full suite of tools for improved patient care administration, efficient records management, faster billing and claims processing and more effective accounts and inventory monitoring.
+Hospital Unified Business Solution (HUB) Is a fully integrated Hospital Information System (HIS) that provides healthcare institutions a full suite of tools for improved patient care administration, efficient records management, faster billing and claims processing and more effective accounts and inventory monitoring.   
 
 https://user-images.githubusercontent.com/109225953/205487259-08ffacdc-edad-49d5-82cb-7b2b336930d9.mp4
 
